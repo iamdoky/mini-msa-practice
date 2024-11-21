@@ -1,0 +1,27 @@
+server:
+  port: 8000
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+token:
+  expiration_time: 86400000 #1일
+  secret: mySecretSet123
+
+spring:
+  application:
+    name: apigateway-service
+  cloud:
+    gateway:
+      routes:
+        - id : open-book-api
+          uri : lb://OPEN-BOOK-API
+          predicates:
+            - Path=/open-book-api/**
+        - id: user-service
+          uri : lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
