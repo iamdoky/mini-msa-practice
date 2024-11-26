@@ -18,7 +18,7 @@ public class AuthenticationController {
 
     private final AuthenticationService authenticationService;
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public ResponseEntity<String> getMemberProfile(@Valid @RequestBody LoginRequest request) {
 
         return ResponseEntity.status(HttpStatus.OK).body(authenticationService.login(request));

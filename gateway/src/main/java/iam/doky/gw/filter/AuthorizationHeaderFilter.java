@@ -1,4 +1,4 @@
-package iam.doky.gw.auth;
+package iam.doky.gw.filter;
 
 import io.jsonwebtoken.Jwts;
 import lombok.extern.slf4j.Slf4j;
