@@ -9,7 +9,7 @@
   "state": null,
   "propertySources": [
     {
-      "name": "file:/${home}/Desktop/iamdoky/mini-msa-practice/user.yml"
+      "name": "file://${home}/Desktop/iamdoky/mini-msa-practice/user.yml"
     }
   ]
 }
