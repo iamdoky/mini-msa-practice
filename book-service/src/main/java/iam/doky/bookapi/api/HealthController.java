@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/open-book-api")
+@RequestMapping("/open-book")
 @Slf4j
 public class HealthController {
 
