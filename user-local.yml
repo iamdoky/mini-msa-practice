@@ -1,0 +1,15 @@
+
+{
+  "name": "user",
+  "profiles": [
+  "local"
+  ],
+  "label": null,
+  "version": null,
+  "state": null,
+  "propertySources": [
+    {
+      "name": "file:/${home}/Desktop/iamdoky/mini-msa-practice/user.yml"
+    }
+  ]
+}
