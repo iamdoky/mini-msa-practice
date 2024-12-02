@@ -11,6 +11,6 @@ spring:
     config:
       server:
         native:
-          search-locations: file:/${home}/Desktop/iamdoky/mini-msa-practice
+          search-locations: file://${home}/Desktop/iamdoky/mini-msa-practice
         git:
           uri: https://github.com/iamdoky/mini-msa-practice.git
