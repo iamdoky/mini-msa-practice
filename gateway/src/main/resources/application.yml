@@ -6,10 +6,12 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-token:
-  expiration_time: 86400000 #1일
-  secret: mySecretSet123
+#token:
+#  expiration_time: 86400000 #1일
+#  secret: mySecretSet123
 
 spring:
   application:

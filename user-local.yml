@@ -1,15 +1,6 @@
+token:
+  expiration_time: 86400000
+  secret: mySecretSec123_local_24120201
 
-{
-  "name": "user",
-  "profiles": [
-  "local"
-  ],
-  "label": null,
-  "version": null,
-  "state": null,
-  "propertySources": [
-    {
-      "name": "file://${home}/Desktop/iamdoky/mini-msa-practice/user.yml"
-    }
-  ]
-}
+gateway:
+  ip: 127.0.0.1:8000
