@@ -13,31 +13,31 @@ token:
 
 spring:
   application:
-    name: apigateway-service
+    name: gateway
   cloud:
     gateway:
       routes:
-        - id : open-book-api
-          uri : lb://OPEN-BOOK-API
+        - id : open-book
+          uri : lb://OPEN-BOOK
           predicates:
-            - Path=/open-book-api/**
-        - id: user-service
-          uri : lb://USER-SERVICE
+            - Path=/open-book/**
+        - id: user
+          uri : lb://USER
           predicates:
-            - Path=/user-service/**
-        - id : user-service
-          uri : lb://USER-SERVICE
+            - Path=/user/**
+        - id : user
+          uri : lb://USER
           predicates:
             - Path=/api/v1/auth/login
             - Method=POST
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
-        - id: user-service
-          uri: lb://USER-SERVICE
+            - RewritePath=/user/(?<segment>.*), /$\{segment}
+        - id: user
+          uri: lb://USER
           predicates:
             - Path=/api/v1/member
             - Method=POST
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+            - RewritePath=/user/(?<segment>.*), /$\{segment}

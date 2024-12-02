@@ -3,9 +3,9 @@ server:
 
 spring:
   application:
-    name: config-server
+    name: config
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/iamdoky/config-server.git
+          uri: https://github.com/iamdoky/mini-msa-practice/tree/master/config-server
