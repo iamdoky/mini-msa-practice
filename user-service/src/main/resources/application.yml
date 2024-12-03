@@ -4,17 +4,22 @@ server:
 spring:
   application:
     name: user
-  profiles:
-    active:
-    group:
-      local:
-        - db
-        - jpa
-        - logging
-      dev:
-        - db
-        - jpa
-        - logging
+#  profiles:
+#    active:
+#    group:
+#      local:
+#        - db
+#        - jpa
+#        - logging
+#      dev:
+#        - db
+#        - jpa
+#        - logging
+
+#token:
+#  expiration_time: 86400000
+#  secret: mySecretSec123_local_24120201
+
 
 eureka:
   client:
@@ -24,3 +29,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
