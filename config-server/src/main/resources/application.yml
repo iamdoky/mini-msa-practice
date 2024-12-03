@@ -14,3 +14,9 @@ spring:
           search-locations: file://${home}/Desktop/iamdoky/mini-msa-practice
         git:
           uri: https://github.com/iamdoky/mini-msa-practice.git
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

@@ -3,4 +3,4 @@ token:
   secret: mySecretSec123_24120201
 
 gateway:
-  ip: 127.0.0.1:8000
+  ip: 127.0.0.1
