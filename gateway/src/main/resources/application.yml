@@ -16,6 +16,11 @@ eureka:
 spring:
   application:
     name: gateway
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     gateway:
       routes:

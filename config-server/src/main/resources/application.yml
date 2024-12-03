@@ -1,12 +1,15 @@
 server:
   port: 8081
-
 spring:
   application:
     name: config
   profiles:
     active: native
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       server:
@@ -14,9 +17,8 @@ spring:
           search-locations: file://${home}/Desktop/iamdoky/mini-msa-practice
         git:
           uri: https://github.com/iamdoky/mini-msa-practice.git
-
 management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: health, busrefresh
